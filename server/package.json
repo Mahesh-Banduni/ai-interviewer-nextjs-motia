@@ -1,0 +1,50 @@
+{
+  "name": "server",
+  "description": "",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "postinstall": "motia install && prisma generate",
+    "dev": "motia dev --port 8000",
+    "start": "motia start --port 8000",
+    "generate-types": "motia generate-types",
+    "build": "motia build",
+    "clean": "rm -rf dist node_modules python_modules .motia .mermaid",
+    "ngrok": "ngrok http --url=resolved-heartily-gnat.ngrok-free.app 8000"
+  },
+  "keywords": [
+    "motia"
+  ],
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "@langchain/community": "^1.0.7",
+    "@langchain/core": "^1.1.4",
+    "@motiadev/adapter-bullmq-events": "^0.17.9-beta.191",
+    "@motiadev/core": "^0.17.9-beta.191",
+    "@motiadev/plugin-bullmq": "^0.17.9-beta.191",
+    "@motiadev/plugin-endpoint": "^0.17.9-beta.191",
+    "@motiadev/plugin-logs": "^0.17.9-beta.191",
+    "@motiadev/plugin-observability": "^0.17.9-beta.191",
+    "@motiadev/plugin-states": "^0.17.9-beta.191",
+    "@prisma/adapter-pg": "^7.1.0",
+    "@prisma/client": "^7.1.0",
+    "backblaze-b2": "^1.7.1",
+    "bcrypt": "^6.0.0",
+    "jsonwebtoken": "^9.0.3",
+    "livekit-server-sdk": "^2.15.0",
+    "motia": "^0.17.9-beta.191",
+    "nodemailer": "^7.0.11",
+    "pdf-parse": "^1.1.4",
+    "pg": "^8.16.3",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "@types/pg": "^8.15.6",
+    "@types/react": "^19.2.7",
+    "dotenv": "^17.2.3",
+    "prisma": "^7.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  }
+}
